@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html style="height:100%">
+	<head>
+		<meta name="description" content="">
+		<meta name="keywords" content="">
+		<link rel="stylesheet" type="text/css" href="option.css">
+		<script type='text/javascript' src='page/client.js'></script>	
+		<title>Rekimen</title>
+		<link rel="shortcut icon" href="icon/icon.png">		
+	</head>
+	<body style="position: relative; min-height: 100%; top:0px">
+		<div id="top_index"></div>
+		<div id="img_control"></div>
+		<img src="img/rekimen.jpg" id="img">
+		<div id="menu_search">
+			Search site
+			<form id="query_rest" action="javascript:query_rest()"method="POST">
+				<input type="text" size="10" name="text_restaurant" placeholder="Restaurant" id="form1">
+				<input type="submit" value="Search" id="search_rest">
+			</form>			
+			<form id="query_dish" action="javascript:query_dish()"method="POST">
+				<input type="text" size="10" name="text_dish" placeholder="Dish" id="form2">
+				<input type="submit" value="Search" id="search_dish">
+			</form>
+		</div>			
+		<div id="menu_navigation">
+			<ul id="linebar">
+				<li> <a href="javascript:about()" id="about_menu"><b>ABOUT</b></a></li> 
+				<li> <a href="javascript:createTable('list_restaurant.php')" id="restaurant_menu" ><b>RESTAURANTS</b></a></li> 
+				<li> <a href="javascript:createTable('list_dish.php','undefined','undefined')" id="dishes_menu"><b>DISHES</b></a></li>
+				<li> <a href="javascript:query_menu()" id="query_menu"><b>QUERY</b></a></li> 				
+				<li> <a href="javascript:contact_menu()" id="contact_menu"><b>CONTACT</b></a></li>
+			</ul>		
+		</div>
+		<div id="loading"><p class="loading">Loading...<p>
+			<img src="icon/planet.gif" id="animated">
+		</div>		
+		<div id="table">			
+			<script type="text/javascript">
+				about();
+			</script>
+		</div>		
+		<img src="img/rekimen2.jpg" id="img2">
+		<p class="project">Web-Programming project 2012/2013</p>
+		<p class="copyright">All right reserved<p>
+	</body>
+</html>
